@@ -1,0 +1,33 @@
+Changes
+examples/psgi/app.psgi
+examples/psgi/template.apl
+lib/Text/APL.pm
+lib/Text/APL/Base.pm
+lib/Text/APL/Compiler.pm
+lib/Text/APL/Context.pm
+lib/Text/APL/Parser.pm
+lib/Text/APL/ParserChunked.pm
+lib/Text/APL/ParserFactory.pm
+lib/Text/APL/Reader.pm
+lib/Text/APL/Translator.pm
+lib/Text/APL/Writer.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+MYMETA.json
+MYMETA.yml
+README.pod
+t/parser-chunked.t
+t/parser.t
+t/reader.t
+t/render.t
+t/template
+t/translator.t
+xt/changes.t
+xt/kwalitee.t
+xt/perlcritic.t
+xt/perlcriticrc
+xt/pod-coverage.t
+xt/pod.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
