@@ -1,4 +1,7 @@
 Changes
+LICENSE
+README.pod
+cpanfile
 examples/psgi/app.psgi
 examples/psgi/template.apl
 lib/Text/APL.pm
@@ -12,11 +15,7 @@ lib/Text/APL/Reader/AIO.pm
 lib/Text/APL/Translator.pm
 lib/Text/APL/WithCaching.pm
 lib/Text/APL/Writer.pm
-Makefile.PL
-MANIFEST			This list of files
-MANIFEST.SKIP
-MYMETA.json
-MYMETA.yml
+minil.toml
 t/caching.t
 t/context.t
 t/parser.t
@@ -25,8 +24,8 @@ t/render.t
 t/template
 t/translator.t
 t/writer.t
-xt/changes.t
-xt/pod-coverage.t
-xt/pod.t
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+xt/leaks.t
+META.json
+META.yml
+MANIFEST
+Build.PL

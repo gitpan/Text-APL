@@ -1,43 +1,3 @@
-package Text::APL;
-
-use strict;
-use warnings;
-
-our $VERSION = 0.04;
-
-use Text::APL::Core;
-use Text::APL::WithCaching;
-
-sub new {
-    my $class = shift;
-    my (%options) = @_;
-
-    $options{charset} ||= 'UTF-8';
-
-    $options{reader} ||= $class->_build_reader(charset => $options{charset});
-
-    if (delete $options{cache}) {
-        return Text::APL::WithCaching->new(%options);
-    }
-
-    return Text::APL::Core->new(%options);
-}
-
-sub _build_reader {
-    my $self = shift;
-
-    exists $INC{"AnyEvent.pm"}
-      ? do {
-        require AnyEvent::AIO;
-        require Text::APL::Reader::AIO;
-        Text::APL::Reader::AIO->new(@_);
-      }
-      : exists $INC{"IO/AIO.pm"}
-      ? do { require Text::APL::Reader::AIO; Text::APL::Reader->AIO->new(@_) }
-      : Text::APL::Reader->new(@_);
-}
-
-1;
 __END__
 
 =pod
@@ -91,11 +51,6 @@ handle are also available.
 Parser can parse not only full templates but chunk by chunk correctly resolving
 any ambiguous leftovers. This allows immediate parsing.
 
-This for example works just fine:
-
-    $parser->parse('<% $hello');
-    $parser->parse(' %>');
-
 =head2 Compiler
 
 Compiler compiles templates into Perl code but when evaluating does not create
@@ -142,6 +97,8 @@ Accepted options:
 =over
 
 =item * parser (by default L<Text::APL::Parser>)
+
+=item * parser_factory (by default L<Text::APL::ParserFactory>)
 
 =item * translator (by default L<Text::APL::Translator>)
 
