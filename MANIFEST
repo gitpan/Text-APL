@@ -1,3 +1,4 @@
+Build.PL
 Changes
 LICENSE
 README.pod
@@ -28,4 +29,3 @@ xt/leaks.t
 META.json
 META.yml
 MANIFEST
-Build.PL

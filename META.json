@@ -44,7 +44,7 @@
    "provides" : {
       "Text::APL" : {
          "file" : "lib/Text/APL.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "Text::APL::Base" : {
          "file" : "lib/Text/APL/Base.pm"
@@ -88,7 +88,7 @@
          "web" : "https://github.com/vti/text-apl"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_contributors" : [
       "vti <viacheslav.t@gmail.com>"
    ]
